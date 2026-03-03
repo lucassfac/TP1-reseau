@@ -15,6 +15,8 @@
 /* =============================== */
 /* Programme principal - émetteur  */
 /* =============================== */
+int generer_controle(const paquet_t *paquet);
+
 int main(int argc, char* argv[])
 {
     unsigned char message[MAX_INFO]; /* message de l'application */
