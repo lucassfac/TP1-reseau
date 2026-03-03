@@ -6,6 +6,8 @@
 /* =============================== */
 /* Programme principal - émetteur  */
 /* =============================== */
+int generer_controle(const paquet_t *paquet);
+
 int main(int argc, char* argv[]){
     unsigned char message[MAX_INFO];
     int taille_msg;
@@ -33,6 +35,17 @@ int main(int argc, char* argv[]){
             de_reseau(&pack);
         }
         de_application(message, &taille_msg);
+    }
+
+    p_data.lg_info = 0;
+    p_data.type = DATA;
+    p_data.somme_ctrl = generer_controle(&p_data);
+
+    // 2. On l'envoie jusqu'à recevoir un ACK (comme pour les autres paquets)
+    pack.type = NACK; 
+    while (pack.type != ACK) {
+        vers_reseau(&p_data); // C'est cette ligne qui débloquera le récepteur
+        de_reseau(&pack);
     }
 
     printf("[TRP] Fin execution protocole transfert de donnees (TDD).\n");

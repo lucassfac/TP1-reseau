@@ -6,6 +6,7 @@
 /* =============================== */
 /* Programme principal - récepteur */
 /* =============================== */
+int verifier_controle(paquet_t *paquet);
 int main(int argc, char* argv[]){
     unsigned char message[MAX_INFO];
     paquet_t p_data, pack;
