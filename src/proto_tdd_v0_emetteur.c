@@ -15,7 +15,6 @@
 /* =============================== */
 /* Programme principal - émetteur  */
 /* =============================== */
-int generer_controle(const paquet_t *paquet);
 
 int main(int argc, char* argv[])
 {

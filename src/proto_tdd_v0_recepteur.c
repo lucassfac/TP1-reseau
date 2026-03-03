@@ -16,7 +16,7 @@
 /* Programme principal - récepteur */
 /* =============================== */
 
-int verifier_controle(paquet_t *paquet);
+
 
 int main(int argc, char* argv[])
 {

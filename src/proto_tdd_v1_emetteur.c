@@ -44,7 +44,7 @@ int main(int argc, char* argv[]){
     // 2. On l'envoie jusqu'à recevoir un ACK (comme pour les autres paquets)
     pack.type = NACK; 
     while (pack.type != ACK) {
-        vers_reseau(&p_data); // C'est cette ligne qui débloquera le récepteur
+        vers_reseau(&p_data); // déblocage le récepteur
         de_reseau(&pack);
     }
 
