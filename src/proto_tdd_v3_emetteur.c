@@ -5,6 +5,7 @@
 
 int inc(int const n, int const mod);
 int generer_controle(const paquet_t *paquet);
+int verifier_controle(paquet_t *paquet);
 /* =============================== */
 /* Programme principal - émetteur  */
 /* =============================== */
@@ -63,7 +64,7 @@ int main(int argc, char* argv[]) {
                 depart_temporisateur(100);
             }
 
-            curseur = (curseur, SEQ_NUM_SIZE);
+            curseur = inc(curseur, SEQ_NUM_SIZE);
         }
         else {
             evt = attendre();

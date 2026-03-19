@@ -7,6 +7,8 @@
 /* Programme principal - recepteur  */
 /* =============================== */
 int verifier_controle(paquet_t *paquet);
+int generer_controle(const paquet_t *paquet);
+int inc(int const n, int const mod);
 
 int main(int argc, char* argv[]) {
     unsigned char message[MAX_INFO];
