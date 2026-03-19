@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
                 depart_temporisateur(100);
             }
 
-            curseur = inc(curseur, SEQ_NUM_SIZE);
+            curseur = (curseur, SEQ_NUM_SIZE);
         }
         else {
             evt = attendre();

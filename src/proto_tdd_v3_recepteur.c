@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
             fin = vers_application(message, p_data.lg_info);
             
             // On attend le suivant
-            num_seq_attendu = (num_seq_attendu + 1) % SEQ_NUM_SIZE;
+            num_seq_attendu = inc(num_seq_attendu,SEQ_NUM_SIZE);
 
         } 
         // 2. Le paquet est CORROMPU ou HORS SÉQUENCE (Déséquencement)
