@@ -41,13 +41,6 @@ int main(int argc, char* argv[]){
     p_data.type = DATA;
     p_data.somme_ctrl = generer_controle(&p_data);
 
-    // 2. On l'envoie jusqu'à recevoir un ACK (comme pour les autres paquets)
-    pack.type = NACK; 
-    while (pack.type != ACK) {
-        vers_reseau(&p_data); // déblocage le récepteur
-        de_reseau(&pack);
-    }
-
     printf("[TRP] Fin execution protocole transfert de donnees (TDD).\n");
     return 0;
 }

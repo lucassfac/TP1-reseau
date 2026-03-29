@@ -49,7 +49,7 @@ int main(int argc, char* argv[]){
         arret_temporisateur();
         de_application(message, &taille_msg);
     }
-
+    /*
     // ==========================================
     // AJOUT : ENVOI DU PAQUET DE FIN (Taille 0)
     // ==========================================
@@ -72,6 +72,7 @@ int main(int argc, char* argv[]){
     
     arret_temporisateur();
     // ==========================================
+    */
 
     printf("[TRP] Fin execution protocole transfert de donnees (TDD).\n");
     return 0;
